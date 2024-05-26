@@ -17,6 +17,9 @@ def create_file_if_not_exists(file_path):
 
 
 def append_to_json_file(file_path, new_data):
+    """
+    Append json data to json file.
+    """
     if os.path.exists(file_path):
         with open(file_path, 'r') as file:
             try:

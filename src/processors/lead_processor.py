@@ -41,6 +41,9 @@ class LeadProcessor():
         self.store_lead_process(lead, self.workflows_mappings.get(lead_source,{}), "success")
 
     def store_lead_process(self, lead, workflow, status):
+        """
+        Store lead processing status to json file.
+        """
         lead['workflow'] = workflow
         lead['processing_status'] = status
         file_utils.append_to_json_file(self.json_store_filepath, lead)
