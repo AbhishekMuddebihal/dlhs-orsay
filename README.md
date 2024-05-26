@@ -19,8 +19,8 @@ This project is a prototype for a Dynamic Lead Handling System designed for sale
 1. Clone the repository:
 
     ```bash
-    git clone https://github.com/your-username/dynamic-lead-handling-system.git
-    cd dynamic-lead-handling-system```
+    git clone https://github.com/AbhishekMuddebihal/dlhs-orsay.git
+    cd dlhs-orsay```
 
 2. Install required packages:
     ```bash
