@@ -38,8 +38,9 @@ def generate_lead():
     return lead
 
 def simulate_lead_generation(num_leads):
-    leads = []
+    """
+    Simulates lead generation
+    """
     for _ in range(num_leads):
-        leads.append(generate_lead())
+        yield generate_lead()
         time.sleep(random.uniform(0.1, 1.0))  # Simulate time delay for lead input
-    return leads

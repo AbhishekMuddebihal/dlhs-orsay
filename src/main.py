@@ -1,10 +1,20 @@
+from queues.lead_queue import LeadQueue
+from generators.leads_generator import simulate_lead_generation
+from processors.lead_processor import LeadProcessor
 
-from modules.workflow_config import WorkflowConfiguration
 
 def main():
-    workflow_config = WorkflowConfiguration()
-    workflows_mappings = workflow_config.get_workflows_mappings()
-    print("workflows mappings :", workflows_mappings)
+    print("Initializing LeadQueue...")
+    
+    leadProcessor = LeadProcessor()
+    
+    leadQueue = LeadQueue()
+    leadQueue.subscribe(leadProcessor.process_lead)
+
+    for lead in simulate_lead_generation(20):
+        leadQueue.put(lead)
+
+
 
 if __name__ == "__main__":
     main()
