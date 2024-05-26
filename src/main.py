@@ -3,8 +3,8 @@ from modules.workflow_config import WorkflowConfiguration
 
 def main():
     workflow_config = WorkflowConfiguration()
-    workflows = workflow_config.get_workflows()
-    print("workflows :", workflows)
+    workflows_mappings = workflow_config.get_workflows_mappings()
+    print("workflows mappings :", workflows_mappings)
 
 if __name__ == "__main__":
     main()

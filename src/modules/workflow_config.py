@@ -1,18 +1,15 @@
 
-from modules.generators import workflows_generator
+from utils.settings import load_settings
 import json
 import os
 
 class WorkflowConfiguration():
 
     def __init__(self):
-        self.workflows = []
-        
-        settings_path = os.path.join(os.path.dirname(__file__), '../configurations/settings.json')
-        with open(settings_path,'r') as json_file:
-            settings = json.load(json_file)
-            self.workflows = settings['workflows_mapping']
+        settings = load_settings()
+
+        self.workflows_mappings = settings['workflows_mapping']
     
 
-    def get_workflows(self):
-        return self.workflows
+    def get_workflows_mappings(self):
+        return self.workflows_mappings
