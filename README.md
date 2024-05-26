@@ -17,7 +17,6 @@ This project is a prototype for a Dynamic Lead Handling System designed for sale
 ### Installation
 
 1. Clone the repository:
-
     ```bash
     git clone https://github.com/AbhishekMuddebihal/dlhs-orsay.git
     cd dlhs-orsay
@@ -29,7 +28,6 @@ This project is a prototype for a Dynamic Lead Handling System designed for sale
     ```
 
 ### Usage
-
     ```bash
     python main.py <number_of_leads_to_generate>
     ```
