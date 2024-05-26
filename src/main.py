@@ -11,6 +11,7 @@ def main():
     leadQueue = LeadQueue()
     leadQueue.subscribe(leadProcessor.process_lead)
 
+    print("Initialization of LeadQueue Completed.")
     for lead in simulate_lead_generation(20):
         leadQueue.put(lead)
 
