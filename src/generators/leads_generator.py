@@ -31,7 +31,7 @@ def generate_lead():
         'name': name,
         'email': generate_random_email(name),
         'phone': generate_random_phone(),
-        'source': generate_random_lead_source(),
+        'lead_source': generate_random_lead_source(),
         'interest_level': generate_random_interest_level(),
         'timestamp': datetime.now().isoformat()
     }

@@ -32,7 +32,7 @@ class LeadProcessor():
         """
         This function processes each lead.
         """
-        lead_source = lead['source']
+        lead_source = lead['lead_source']
 
         time.sleep(random.uniform(0.1, 2.0))
         message = "Lead received from " + str(lead_source) + ". Processed with " + str(self.workflows_mappings.get(lead_source,{})['persona']) + " and sent by " + str(self.workflows_mappings.get(lead_source,{})['output_channel']) + " communication channel."
