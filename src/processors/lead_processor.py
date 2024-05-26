@@ -1,4 +1,5 @@
 from utils.settings import load_settings
+from utils.logger import get_logger
 
 class LeadProcessor():
     """
@@ -8,13 +9,18 @@ class LeadProcessor():
     def __init__(self):
         """
         Initialises LeadProcessor by loading workflows mappings from settings.
+        It also initialises logger.
         """
         settings = load_settings()
         self.workflows_mappings = settings.get('workflows_mapping',[])
+        self.logger = get_logger()
 
     def process_lead(self,lead):
         """
         This function processes each lead.
         """
         lead_source = lead['source']
-        print("processing lead by",self.workflows_mappings.get(lead_source,{})['persona'])
+
+        message = "Lead received from " + str(lead_source) + ". Processed with " + str(self.workflows_mappings.get(lead_source,{})['persona']) + " and sent by " + str(self.workflows_mappings.get(lead_source,{})['output_channel']) + " communication channel."
+        print(message)
+        self.logger.info(message)
