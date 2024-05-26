@@ -1,7 +1,7 @@
 
 from rx.subject import Subject
 
-class LeadQueue:
+class ObservableQueue:
     """
     A queue that triggers a callback function whenever an item is added.
     

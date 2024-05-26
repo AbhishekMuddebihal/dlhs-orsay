@@ -1,4 +1,4 @@
-from queues.lead_queue import LeadQueue
+from queues.observable_queue import ObservableQueue
 from generators.leads_generator import simulate_lead_generation
 from processors.lead_processor import LeadProcessor
 
@@ -8,7 +8,7 @@ def main():
     
     leadProcessor = LeadProcessor()
     
-    leadQueue = LeadQueue()
+    leadQueue = ObservableQueue()
     leadQueue.subscribe(leadProcessor.process_lead)
 
     print("Initialization of LeadQueue Completed.")
