@@ -1,0 +1,46 @@
+{
+    "lead_sources": [
+      "Web Form",
+      "Social Media",
+      "Email Campaign",
+      "Referral",
+      "Salesforce"
+    ],
+    "output_channels": [
+      "Email",
+      "SMS",
+      "Phone Call",
+      "Social Media Message",
+      "WhatsApp"
+    ],
+    "persona_names": [
+      "Sofia",
+      "Liam",
+      "Olivia",
+      "Noah",
+      "Emma"
+    ],
+    "workflows_mapping": {
+        "Web Form" : {
+            "persona": "Sofia",
+            "output_channel": "SMS"
+        },
+        "Social Media" : {
+            "persona": "Liam",
+            "output_channel": "Social Media Message"
+        },
+        "Email Campaign" : {
+            "persona": "Olivia",
+            "output_channel": "Email"
+        },
+        "Referral" : {
+            "persona": "Noah",
+            "output_channel": "Phone Call"
+        },
+        "Salesforce" : {
+            "persona": "Emma",
+            "output_channel": "WhatsApp"
+        }
+    }
+}
+  
