@@ -28,32 +28,33 @@ This project is a prototype for a Dynamic Lead Handling System designed for sale
     ```
 
 ### Usage
-    ```bash
-    python main.py <number_of_leads_to_generate>
-    ```
+    
+```bash
+python src/main.py <number_of_leads_to_generate>
+```
 
-    This will generate leads and processes, and save status to output/processed_event_store.json.
+This will generate leads and processes, and save status to `output/processed_event_store.json`
 
 ## Lead Attributes
 
-    - Name: Randomly generated name.
-    - Email: Randomly generated email based on the name.
-    - Phone: Randomly generated 10-digit phone number.
-    - Lead Source: Randomly selected from predefined sources.
-    - Interest Level: Randomly assigned interest level (Low, Medium, High).
-    - Timestamp: Current timestamp of lead generation.
+- **Name:** Randomly generated name.
+- **Email:** Randomly generated email based on the name.
+- **Phone:** Randomly generated 10-digit phone number.
+- **Lead Source:** Randomly selected from predefined sources.
+- **Interest Level:** Randomly assigned interest level (Low, Medium, High).
+- **Timestamp:** Current timestamp of lead generation.
 
 ## Workflow Attributes
 
-    - Lead Source: Randomly selected from predefined sources.
-    - Persona: Randomly assigned persona.
-    - Output Channel: Randomly selected from predefined channels.
+- **Lead Source:** Randomly selected from predefined sources.
+- **Persona:** Randomly assigned persona.
+- **Output Channel:** Randomly selected from predefined channels.
 
 ## Example
 
-    Here’s an example of a generated lead with an assigned workflow:
+Here’s an example of a generated lead with an assigned workflow:
 
-    ```
+```
     {
         "name": "Sofia Smith",
         "email": "sofia.smith@example.com",
@@ -66,9 +67,4 @@ This project is a prototype for a Dynamic Lead Handling System designed for sale
             "output_channel": "WhatsApp"
         }
     }
-    ```
-
-
-
-
-
+```
