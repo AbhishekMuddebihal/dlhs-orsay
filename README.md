@@ -21,16 +21,18 @@ This project is a prototype for a Dynamic Lead Handling System designed for sale
     ```bash
     git clone https://github.com/AbhishekMuddebihal/dlhs-orsay.git
     cd dlhs-orsay
+    ```
 
 2. Install required packages:
     ```bash
     pip install -r requirements.txt
-
+    ```
 
 ### Usage
 
     ```bash
     python main.py <number_of_leads_to_generate>
+    ```
 
     This will generate leads and processes, and save status to output/processed_event_store.json.
 
@@ -65,7 +67,8 @@ This project is a prototype for a Dynamic Lead Handling System designed for sale
             "persona": "Tech Enthusiast",
             "output_channel": "WhatsApp"
         }
-    }```
+    }
+    ```
 
 
 
